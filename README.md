@@ -1,17 +1,36 @@
-# Rede-semente-ong[README.md](https://github.com/user-attachments/files/33270634/README.md)
+# Rede Semente — plataforma para uma organização social
 
-# Rede Semente
+## Sobre o site
 
-Protótipo acadêmico de plataforma institucional para uma organização social fictícia. O site estático reúne apresentação institucional, projetos, oportunidades para voluntariado, transparência demonstrativa e cadastro de interesse.
+A Rede Semente é um protótipo acadêmico de presença digital para uma ONG fictícia. A ideia é mostrar como um site pode ajudar uma organização social a se apresentar ao público, divulgar suas iniciativas e aproximar pessoas que desejam contribuir.
+
+O site foi pensado para diferentes visitantes: quem quer conhecer a organização e seu impacto, quem procura oportunidades de voluntariado, quem deseja apoiar financeiramente uma causa e quem precisa encontrar informações de contato e transparência. A identidade visual usa o tema de sementes e cultivo como metáfora para o impacto que cresce quando a comunidade participa.
+
+As páginas formam um percurso simples: a página inicial apresenta a missão e os destaques; a página de projetos detalha as iniciativas, formas de participação e apoio; e o cadastro permite demonstrar como alguém manifesta interesse em fazer parte da rede.
+
+Este projeto também serve como exercício de desenvolvimento front-end com HTML semântico, CSS responsivo, JavaScript, formulários acessíveis, validação no navegador e organização de recursos locais.
+
+## O que você encontra
+
+- **Início:** apresentação da Rede Semente, missão, visão e valores, indicadores ilustrativos de impacto, projetos em destaque, transparência e formas de contato.
+- **Projetos:** iniciativas sociais organizadas por categoria, filtro interativo, oportunidades de voluntariado e uma área demonstrativa de doação.
+- **Cadastro:** formulário de interesse para pessoas voluntárias, apoiadores ou possíveis parceiros, com campos de contato e endereço, validação HTML5 e máscaras de CPF, telefone e CEP.
+- **Navegação responsiva:** menu adaptado a celulares, links para as principais áreas e acesso às páginas pelo menu e pelas chamadas de ação.
+
+## Importante: protótipo demonstrativo
+
+A Rede Semente, seus contatos, documentos, projetos, números e demais dados institucionais são fictícios. O site não representa uma ONG real.
+
+O cadastro, a newsletter e a doação são demonstrações de interface: **não enviam nem armazenam dados e não processam pagamentos**. Não informe dados pessoais reais. Para transformar o protótipo em um serviço real, seria necessário substituir as informações de exemplo, implementar um backend seguro, integrar serviços de pagamento e newsletter e publicar políticas de privacidade e tratamento de dados.
 
 ## Estrutura
 
-- `index.html` — início, missão, valores, projetos em destaque, contato e newsletter.
-- `projetos.html` — projetos com filtro por categoria, oportunidades, área demonstrativa de doação e transparência.
-- `cadastro.html` — cadastro de interesse com campos semânticos, validação nativa, máscaras e verificação dos dígitos do CPF.
-- `style.css` — identidade visual, layout mobile-first, breakpoints e estados de foco/acessibilidade.
-- `script.js` — navegação móvel, filtros e comportamentos demonstrativos dos formulários.
-- `assets/` — ilustrações SVG locais e escaláveis.
+- `index.html` — página inicial e apresentação institucional.
+- `projetos.html` — iniciativas, voluntariado, apoio e transparência.
+- `cadastro.html` — formulário demonstrativo de interesse.
+- `style.css` — identidade visual, estilos responsivos e estados de foco.
+- `script.js` — menu móvel, filtro de projetos, máscaras e validação demonstrativa dos formulários.
+- `assets/` — ilustrações SVG usadas pelo site.
 
 ## Executar
 
@@ -19,24 +38,9 @@ Abra `index.html` em um navegador ou sirva a pasta com qualquer servidor web est
 
 ## Acessibilidade e desempenho
 
-As páginas usam landmarks HTML5, títulos hierárquicos, link para pular ao conteúdo, navegação por teclado, rótulos associados, anúncios de estado com `aria-live`, foco visível e suporte a `prefers-reduced-motion`. Imagens decorativas são SVGs locais; imagens fora do primeiro viewport usam carregamento tardio. O layout possui adaptações para telas móveis, intermediárias e amplas.
+As páginas incluem landmarks HTML5, hierarquia de títulos, link para pular ao conteúdo, rótulos de formulário, foco visível, mensagens de estado com `aria-live` e suporte a `prefers-reduced-motion`. As ilustrações SVG são locais, algumas imagens usam carregamento tardio e o layout se adapta a diferentes larguras de tela. Esses recursos apoiam a acessibilidade, mas não equivalem a uma certificação WCAG 2.1 AA.
 
-## Limites importantes da demonstração
+As máscaras ajudam a formatar CPF, telefone e CEP durante a digitação, e o navegador verifica os dígitos do CPF. Essas verificações são apenas demonstrativas; validação no cliente não substitui validação no servidor.
 
-- O formulário valida os dados no navegador, mas **não envia nem armazena informações pessoais**. Não informe dados reais neste protótipo.
-- Máscaras de CPF, telefone e CEP são conveniências de entrada; o CPF também tem os dígitos verificadores conferidos no navegador. Validação no cliente não substitui validação segura no servidor.
-- A área de doação **não processa pagamentos**. Para uso real, é necessário backend, integração com um provedor de pagamento, HTTPS, proteção contra abuso e políticas de privacidade e retenção de dados.
-- Newsletter, certificados, autenticação/painel administrativo, relatórios para download e inscrição/seleção persistente de voluntários precisam de serviços e implementação de backend.
-- Nome, endereço, telefone, e-mail, CNPJ, estatísticas, vagas, relatórios e contato exibidos são dados fictícios de demonstração e devem ser substituídos e verificados pela ONG antes da publicação.
-- HTTPS é configurado no serviço de hospedagem, não por arquivos HTML locais. Nenhum link público do GitHub foi criado por este protótipo.
+Recursos como processamento real de doações, newsletter conectada, área administrativa, emissão de certificados, relatórios para download e seleção persistente de voluntários não fazem parte deste protótipo e exigem serviços adicionais.
 
-## Publicar no GitHub Pages
-
-1. Crie um repositório público no GitHub e envie os arquivos desta pasta mantendo os caminhos.
-2. Em **Settings → Pages**, escolha a branch e a pasta raiz como origem.
-3. Acesse o endereço fornecido pelo GitHub Pages e verifique as três páginas em desktop e celular.
-4. Antes de divulgar, substitua os dados demonstrativos, configure domínio/HTTPS se necessário e conecte serviços reais de forma segura.
-
-## Validação HTML
-
-Valide cada página publicada ou o código copiado no [W3C Nu HTML Checker](https://validator.w3.org/nu/). Revise também a acessibilidade e contraste com testes automatizados e navegação manual por teclado/leitor de tela; a estrutura de um protótipo não representa, por si só, certificação WCAG 2.1 AA.
